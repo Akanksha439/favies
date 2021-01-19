@@ -39,7 +39,7 @@ class App extends React.Component{
     console.log('RENDER',this.props.store.getState());
     return (
       <div className="App">
-        <Navbar/>
+        <Navbar dispatch={this.props.store.dispatch}/>
         <div className="main">
           <div className="tabs">
             <div 
@@ -64,7 +64,7 @@ class App extends React.Component{
                />
             ))}
           </div>
-          {dispalyMovies.length==0?<div className="no movies">No movies to dispaly!!</div> : null}
+          {dispalyMovies.length===0?<div className="no movies">No movies to dispaly!!</div> : null}
         </div>
       </div>
     );
